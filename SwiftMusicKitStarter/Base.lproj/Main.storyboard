@@ -50,8 +50,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFz-vr-N1l">
-                                <rect key="frame" x="145.5" y="316" width="84.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Image Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFz-vr-N1l">
+                                <rect key="frame" x="18" y="316" width="339" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -60,10 +60,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="NFz-vr-N1l" firstAttribute="top" secondItem="dvt-BR-DGy" secondAttribute="bottom" constant="41" id="Bah-Ro-cg7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NFz-vr-N1l" secondAttribute="trailing" constant="18" id="Gyd-Qq-x78"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dvt-BR-DGy" secondAttribute="trailing" constant="80" id="PSt-3x-2rm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vgE-ms-53Y" secondAttribute="trailing" constant="40" id="Ssd-cD-BhA"/>
                             <constraint firstItem="NFz-vr-N1l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xxb-fw-9F0"/>
                             <constraint firstItem="dvt-BR-DGy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="YPI-46-X2A"/>
+                            <constraint firstItem="NFz-vr-N1l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="ZPh-9U-rhK"/>
                             <constraint firstItem="dvt-BR-DGy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="e7e-qN-zMO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vgE-ms-53Y" secondAttribute="bottom" constant="40" id="iLy-MN-O4y"/>
                             <constraint firstItem="vgE-ms-53Y" firstAttribute="top" secondItem="NFz-vr-N1l" secondAttribute="bottom" constant="38.5" id="qYz-gy-fB2"/>
@@ -78,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="132.68365817091455"/>
+            <point key="canvasLocation" x="-164" y="126"/>
         </scene>
     </scenes>
 </document>
