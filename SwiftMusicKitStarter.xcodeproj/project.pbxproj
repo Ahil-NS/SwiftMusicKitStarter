@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FACE9A7921FCD56C0031F314 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE9A7821FCD56C0031F314 /* AppDelegate.swift */; };
-		FACE9A7B21FCD56C0031F314 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE9A7A21FCD56C0031F314 /* ViewController.swift */; };
+		FACE9A7B21FCD56C0031F314 /* MusicMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACE9A7A21FCD56C0031F314 /* MusicMainVC.swift */; };
 		FACE9A7E21FCD56C0031F314 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACE9A7C21FCD56C0031F314 /* Main.storyboard */; };
 		FACE9A8021FCD5700031F314 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FACE9A7F21FCD5700031F314 /* Assets.xcassets */; };
 		FACE9A8321FCD5700031F314 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FACE9A8121FCD5700031F314 /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		FACE9A7521FCD56C0031F314 /* SwiftMusicKitStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftMusicKitStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FACE9A7821FCD56C0031F314 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FACE9A7A21FCD56C0031F314 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FACE9A7A21FCD56C0031F314 /* MusicMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicMainVC.swift; sourceTree = "<group>"; };
 		FACE9A7D21FCD56C0031F314 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FACE9A7F21FCD5700031F314 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FACE9A8221FCD5700031F314 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				FACE9A7821FCD56C0031F314 /* AppDelegate.swift */,
-				FACE9A7A21FCD56C0031F314 /* ViewController.swift */,
+				FACE9A7A21FCD56C0031F314 /* MusicMainVC.swift */,
 				FACE9A7C21FCD56C0031F314 /* Main.storyboard */,
 				FACE9A7F21FCD5700031F314 /* Assets.xcassets */,
 				FACE9A8121FCD5700031F314 /* LaunchScreen.storyboard */,
@@ -135,7 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FACE9A7B21FCD56C0031F314 /* ViewController.swift in Sources */,
+				FACE9A7B21FCD56C0031F314 /* MusicMainVC.swift in Sources */,
 				FACE9A7921FCD56C0031F314 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +285,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4KNZCS3M9G;
 				INFOPLIST_FILE = SwiftMusicKitStarter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +304,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4KNZCS3M9G;
 				INFOPLIST_FILE = SwiftMusicKitStarter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
