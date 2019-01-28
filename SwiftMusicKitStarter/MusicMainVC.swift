@@ -14,13 +14,24 @@ class MusicMainVC: UIViewController {
     @IBOutlet weak var songImageView: UIImageView!
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var playPauseButton: UIButton!
     
     var mediaPlayer = MPMusicPlayerController.applicationMusicPlayer
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        changeButtonTitle()
+    }
+    
+    
+    func changeButtonTitle(){
+        if mediaPlayer.playbackState == .playing{
+            playPauseButton.setTitle("Pause", for: .normal)
+        }
+        else{
+            playPauseButton.setTitle("Play", for: .normal)
+        }
     }
     
     @IBAction func chooseButtonTapped(_ sender: Any) {
@@ -37,7 +48,14 @@ class MusicMainVC: UIViewController {
         
     }
     @IBAction func playButtonTapped(_ sender: Any) {
-        
+        if mediaPlayer.playbackState == .playing{
+            mediaPlayer.pause()
+            playPauseButton.setTitle("Play", for: .normal)
+        }
+        else{
+            mediaPlayer.play()
+            playPauseButton.setTitle("Pause", for: .normal)
+        }
     }
 }
 
@@ -60,6 +78,7 @@ extension MusicMainVC : MPMediaPickerControllerDelegate{
         //Sets a music player’s playback queue using a media item collection.
         mediaPlayer.setQueue(with: mediaItemCollection)
         mediaPlayer.play()
+        changeButtonTitle()
     }
     
     //Called when a user dismisses a media item picker by tapping Cancel.

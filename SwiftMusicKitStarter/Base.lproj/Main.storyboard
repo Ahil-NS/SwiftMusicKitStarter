@@ -74,6 +74,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="playPauseButton" destination="fbi-Rs-TbK" id="t1j-DL-EY6"/>
                         <outlet property="songImageView" destination="dvt-BR-DGy" id="qws-FI-Qly"/>
                         <outlet property="titleLabel" destination="NFz-vr-N1l" id="10b-xc-r9B"/>
                     </connections>
