@@ -45,8 +45,29 @@ class MusicMainVC: UIViewController {
     }
     
     @IBAction func randomButtonTapped(_ sender: Any) {
-        
+        if let songs = MPMediaQuery.songs().items{
+            let randomIndex = arc4random_uniform(UInt32(songs.count) - 1)
+            let item = songs[Int(randomIndex)]
+            playItem(item: item)
+        }
     }
+    
+    func playItem(item : MPMediaItem){
+        
+        
+        if let artWorkImage = item.artwork?.image(at: CGSize(width: 50, height: 50)){
+            songImageView.image = artWorkImage
+            if let songName = item.title{
+                titleLabel.text = songName
+            }
+        }
+        
+        //Sets a music player’s playback queue using a media item collection.
+        mediaPlayer.setQueue(with: MPMediaItemCollection(items: [item]))
+        mediaPlayer.play()
+        changeButtonTitle()
+    }
+    
     @IBAction func playButtonTapped(_ sender: Any) {
         if mediaPlayer.playbackState == .playing{
             mediaPlayer.pause()
@@ -65,20 +86,11 @@ extension MusicMainVC : MPMediaPickerControllerDelegate{
     //Called when a user has selected a set of media items.
     func mediaPicker(_ mediaPicker: MPMediaPickerController, didPickMediaItems mediaItemCollection: MPMediaItemCollection) {
         
-        
         for item in mediaItemCollection.items{
-            if let artWorkImage = item.artwork?.image(at: CGSize(width: 50, height: 50)){
-                songImageView.image = artWorkImage
-                if let songName = item.title{
-                    titleLabel.text = songName
-                }
-            }
+           playItem(item: item)
         }
         mediaPicker.dismiss(animated: true, completion: nil)
-        //Sets a music player’s playback queue using a media item collection.
-        mediaPlayer.setQueue(with: mediaItemCollection)
-        mediaPlayer.play()
-        changeButtonTitle()
+
     }
     
     //Called when a user dismisses a media item picker by tapping Cancel.
